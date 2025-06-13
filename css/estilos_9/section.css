@@ -1,0 +1,123 @@
+:root {
+    --color-azul: #196eb4;
+    --color-azul-hover: #033157;
+    --color-blanco: #FFFFFF;
+    --color-oscuro: #363636;
+    --color-oscuro-hover: #070707;
+    --tiempo-animacion:300ms;
+}
+
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.anuncios,
+.chats-producto,
+.chat-individual {
+    border: 2px solid #196eb4;
+    padding: 10px;
+    overflow-y: auto;
+    width: 95%;
+    margin-bottom: 50px;
+}
+
+.anuncios li,
+.chats-producto li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #196eb4;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #f0f8ff;
+}
+
+.chat-individual {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #dcdcdc;
+    height: auto;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+    gap: 0.5rem;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-header {
+    background-color: black;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .chat-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .anuncios {
+        width: 100%;
+    }
+
+    .chats-producto,
+    .chat-individual {
+        width: 100%;
+    }
+
+    .chat-header {
+        background-color: black;
+        color: white;
+        padding: 10px 10px 10px 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .chat-container {
+        flex-direction: row;
+        height: 80vh;
+        margin: 10px 50px;
+    }
+
+    .anuncios {
+        width: 25%;
+    }
+
+    .chats-producto {
+        width: 30%;
+    }
+
+    .chat-individual {
+        width: 45%;
+    }
+
+    .chat-header {
+        background-color: black;
+        color: white;
+        padding: 10px 10px 10px 10px;
+    }
+
+}
